@@ -1,0 +1,184 @@
+[
+  {
+    "id": 0,
+    "artist" : "Billy Joel",
+    "picture" : "https://ayho.fr/covers/img/billy-joel.gif",
+    "track" : "https://ayho.fr/covers/songs/billyjoel.mp3",
+    "featured" : [
+      {
+        "title" : "heya",
+        "out": "450 000 000 000"
+      }
+    ],
+    "biography" : ""
+  },
+  {
+    "id": 1,
+    "artist" : "Velvets",
+    "picture" : "https://ayho.fr/covers/img/velvets.gif",
+    "track" : "https://ayho.fr/covers/songs/velvets.mp3"
+  },
+  {
+    "id": 2,
+    "artist" : "Elvis Presley",
+    "picture" : "https://ayho.fr/covers/img/elvis.gif",
+    "track" : "https://ayho.fr/covers/songs/elvis.mp3"
+  },
+  {
+    "id": 3,
+    "artist" : "Night Fever",
+    "picture" : "https://ayho.fr/covers/img/nightfever.gif",
+    "track" : "https://ayho.fr/covers/songs/nightfever.mp3"
+  },
+  {
+    "id": 4,
+    "artist" : "Orbison",
+    "picture" : "https://ayho.fr/covers/img/orbison.gif",
+    "track" : "https://ayho.fr/covers/songs/orbison.mp3"
+  },
+  {
+    "id": 5,
+    "artist" : "Jimmy Hendrix",
+    "picture" : "https://ayho.fr/covers/img/jimmyhendrix2.gif",
+    "track" : "https://ayho.fr/covers/songs/hendrix2.mp3"
+  },
+  {
+    "id": 6,
+    "artist" : "Sex Pistols",
+    "picture" : "https://ayho.fr/covers/img/godsavethequeen.gif",
+    "track" : "https://ayho.fr/covers/songs/pistols.mp3"
+  },
+  {
+    "id": 7,
+    "artist" : "Bill Halley",
+    "picture" : "https://ayho.fr/covers/img/rockthispoint.gif",
+    "track" : "https://ayho.fr/covers/songs/billalley.mp3"
+  },
+  {
+    "id": 8,
+    "title" : "Quick One",
+    "artist" : "The Who",
+    "picture" : "https://ayho.fr/covers/img/the-who-2.gif",
+    "track" : "https://ayho.fr/covers/songs/quickone.mp3"
+  },
+  {
+    "id": 9,
+    "artist" : "ACDC",
+    "picture" : "https://ayho.fr/covers/img/highway-to-hell.gif",
+    "track" : "https://ayho.fr/covers/songs/acdc.mp3"
+  },
+  {
+    "id": 10,
+    "artist" : "The Beatles",
+    "picture" : "https://ayho.fr/covers/img/beatles.gif",
+    "track" : "https://ayho.fr/covers/songs/beatles.mp3"
+  },
+  {
+    "id": 11,
+    "artist" : "Eagles",
+    "picture" : "https://ayho.fr/covers/img/hotelcalifornia.gif",
+    "track" : "https://ayho.fr/covers/songs/eagles.mp3"
+  },
+  {
+    "id": 12,
+    "artist" : "Four Tops",
+    "picture" : "https://ayho.fr/covers/img/4-tops.gif",
+    "track" : "https://ayho.fr/covers/songs/fourtops.mp3"
+  },
+  {
+    "id": 13,
+    "artist" : "Donna Summer",
+    "picture" : "https://ayho.fr/covers/img/donna-summer.gif",
+    "track" : "https://ayho.fr/covers/songs/donnasummer.mp3"
+  },
+  {
+    "id": 14,
+    "artist" : "Bob Marley",
+    "picture" : "https://ayho.fr/covers/img/bob.gif",
+    "track" : "https://ayho.fr/covers/songs/bobmarley.mp3"
+  },
+  {
+    "id": 15,
+    "artist" : "John Lennon",
+    "picture" : "https://ayho.fr/covers/img/john-lennon.gif",
+    "track" : "https://ayho.fr/covers/songs/lennon.mp3"
+  },
+  {
+    "id": 16,
+    "artist" : "Byrds",
+    "picture" : "https://ayho.fr/covers/img/thebyrds.gif",
+    "track" : "https://ayho.fr/covers/songs/byrds.mp3"
+  },
+  {
+    "id": 17,
+    "artist" : "Hank",
+    "picture" : "https://ayho.fr/covers/img/hank-williams.gif",
+    "track" : "https://ayho.fr/covers/songs/hank.mp3"
+  },
+  {
+    "id": 18,
+    "artist" : "Elton",
+    "picture" : "https://ayho.fr/covers/img/elton-john.gif",
+    "track" : "https://ayho.fr/covers/songs/elton.mp3"
+  },
+  {
+    "id": 19,
+    "artist" : "Zeppelin",
+    "picture" : "https://ayho.fr/covers/img/zeppelin-graffity.gif",
+    "track" : "https://ayho.fr/covers/songs/zeppelin.mp3"
+  },
+  {
+    "id": 20,
+    "artist" : "Kinks",
+    "picture" : "https://ayho.fr/covers/img/kinks.gif",
+    "track" : "https://ayho.fr/covers/songs/kinks.mp3"
+  },
+  {
+    "id": 21,
+    "artist" : "Forever Change",
+    "picture" : "https://ayho.fr/covers/img/forever-changes.gif",
+    "track" : "https://ayho.fr/covers/songs/foreverchange.mp3"
+  },
+  {
+    "id": 22,
+    "artist" : "Bob Dylan",
+    "picture" : "https://ayho.fr/covers/img/bob-dylan.gif",
+    "track" : "https://ayho.fr/covers/songs/bobdylan.mp3"
+  },
+  {
+    "id": 23,
+    "artist" : "Fireball",
+    "picture" : "https://ayho.fr/covers/img/fireball.gif",
+    "track" : "https://ayho.fr/covers/songs/fireball.mp3"
+  },
+  {
+    "id": 24,
+    "artist" : "Generation",
+    "picture" : "https://ayho.fr/covers/img/the-who.gif",
+    "track" : "https://ayho.fr/covers/songs/generation.mp3"
+  },
+  {
+    "id": 25,
+    "artist" : "Jimmy Cliff",
+    "picture" : "https://ayho.fr/covers/img/jimmy.gif",
+    "track" : "https://ayho.fr/covers/songs/cliff.mp3"
+  },
+  {
+    "id": 26,
+    "artist" : "Pink Floyd",
+    "picture" : "https://ayho.fr/covers/img/Pink-floyd-the-wall.gif",
+    "track" : "https://ayho.fr/covers/songs/pinkfloyd.mp3"
+  },
+  {
+    "id": 27,
+    "artist" : "Crystals",
+    "picture" : "https://ayho.fr/covers/img/The-Crystals-Rebel.gif",
+    "track" : "https://ayho.fr/covers/songs/crystals.mp3"
+  },
+  {
+    "id": 28,
+    "artist" : "Sugar",
+    "picture" : "https://ayho.fr/covers/img/Rolling-Stones.gif",
+    "track" : "https://ayho.fr/covers/songs/sugar.mp3"
+  }
+]
