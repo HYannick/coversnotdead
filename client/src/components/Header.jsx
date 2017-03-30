@@ -17,12 +17,12 @@ class Header extends Component {
                     <img width="100%" src="./img/logo.gif" alt="logo"/>
                 </div>
                 <div className="item instructions">
-                    <h3>Trouves en 30 secondes la pochette qui correspond à la musique.</h3>
-                    <h4>N'oublie pas d'activer tes enceintes !</h4>
+                    <h3>Find in 30 seconds the right cover to the song.</h3>
+                    <h4>Don't forget to activate your headphones!</h4>
                 </div>
                 <div className="item score">
-                    <p className="nb-points">Nombre de points : {this.state.scoring}/30</p>
-                    <p className="nb-songs">Nombre de chansons : {this.state.nbSong}/30</p>
+                    <p className="nb-points">Score : {this.state.scoring}/30</p>
+                    <p className="nb-songs">Songs : {this.state.nbSong}/30</p>
                 </div>
 
             </div>
