@@ -1,7 +1,3 @@
-export const INC_SCORE = 'INC_SCORE';
 export const SHUFFLE_SONGS = 'SHUFFLE_SONGS';
-export const MATCH_SONGS = 'MATCH_SONGS';
-export const REMOVE_SONG = 'REMOVE_SONG';
-export const DECREMENT_COUNTER = 'DECREMENT_COUNTER';
 export const ADD_COMPLETED_SONG = 'ADD_COMPLETED_SONG';
-export const RESET_SONGS = 'RESET_SONGS';
+export const LAUNCH = 'LAUNCH';

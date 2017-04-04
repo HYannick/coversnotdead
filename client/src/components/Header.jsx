@@ -12,9 +12,8 @@ class Header extends Component {
                     <img width="100%" src="./img/logo.gif" alt="logo"/>
                 </div>
                 <div className="item instructions">
-                    <h3>Find in 30 seconds the right cover to the song.</h3>
+                    <h3>Find in <span className="counter">{this.props.timer}</span> seconds the right cover to the song.</h3>
                     <h4>Don't forget to activate your headphones!</h4>
-                    <p className="counter">{this.props.timer} s</p>
                 </div>
                 <div className="item score">
                     <p className="nb-points">Score : {this.props.score}/30</p>

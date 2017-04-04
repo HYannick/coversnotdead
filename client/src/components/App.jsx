@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import Header from './Header';
+import Popins from './Popins';
 import {connect} from 'react-redux';
-import {shuffleTracks, addCompletedSong} from '../actions/index';
+import {shuffleTracks, addCompletedSong, launchAction} from '../actions/index';
 import '../style.css';
 import anime from 'animejs';
 
@@ -15,22 +16,25 @@ class Covers extends Component {
             audio: null,
             scoring: 0,
             nbSong: 0,
+            popType: 'launcher',
+            rightPopin: false,
+            wrongPopin: false,
+            launchPopin: true,
+            nextSongPopin : false
         }
     }
 
 
     componentWillReceiveProps(nextProps){
-        let {songs} = nextProps.songList;
-        console.log(this.state.covers.length)
-        this.playTrack(songs);
+        let {songList} = nextProps;
+        setInterval(() => {
+            this.timer();
+        },1000);
+        this.playTrack(songList);
     }
 
-    componentDidUpdate(prevProps){
-        let {songs} = prevProps.songList;
-        console.log(this.state.currentCount);
-        if(this.state.currentCount === 0 ){
-            //TODO nice popup
-            console.log('too slow bud ! ');
+    playFX(fx, ctx){
+        if(fx === 'fadeIn'){
             anime({
                 targets : document.getElementsByClassName('cover'),
                 opacity: 1,
@@ -39,9 +43,33 @@ class Covers extends Component {
                 duration: 400,
                 easing: 'easeOutSine'
             });
+
+        }else{
+            anime({
+                targets : ctx,
+                borderRadius: {
+                    value : "50%",
+                    duration : 800,
+                    easing: 'easeInOutSine'
+                },
+                opacity: 0,
+                scale : 0,
+                duration: 800,
+                easing: 'easeInOutSine'
+            });
+        }
+
+    }
+
+    componentDidUpdate(prevProps){
+        let {songList} = prevProps;
+        if(this.state.currentCount === 0 ){
+            //TODO nice popup
+            console.log('too slow bud ! ');
+            this.playFX('fadeIn');
             this.setState({currentCount : 30});
             this.state.audio.pause();
-            this.updateSongList(songs, songs[0].id);
+            this.updateSongList(songList, songList[0].id);
         }
     }
 
@@ -51,13 +79,11 @@ class Covers extends Component {
             .then(res => res.json())
             .then(json => {
                 this.setState({covers: json}, () => {
-                    this.props.shuffleTracks(this.state.covers);
+                    //this.props.shuffleTracks(this.state.covers);
                 });
             });
         //init timer
-        let time = setInterval(() => {
-            this.timer()
-        },1000)
+
     }
     timer(){
         this.setState({ currentCount: this.state.currentCount - 1 });
@@ -70,6 +96,7 @@ class Covers extends Component {
         let songs = newSongs;
         let audio = new Audio(songs[0].track);
         console.log(songs[0]);
+        console.log(audio);
         this.setState({ nbSong: this.state.nbSong + 1 });
         if(!this.state.playing){
             audio.play();
@@ -91,44 +118,31 @@ class Covers extends Component {
 
     matchTracks(index, ctx){
         const cover = ctx.parentNode;
-        let {songs} = this.props.songList;
-        if(songs[0].id === index){
+        let {songList} = this.props;
+        if(songList[0].id === index){
             this.setState({currentCount: 30});
             this.state.audio.pause();
-            this.updateSongList(songs, songs[0].id);
+            this.updateSongList(songList, songList[0].id);
             this.setState({scoring: this.state.scoring + 1});
-            anime({
-                targets : document.getElementsByClassName('cover'),
-                opacity: 1,
-                scale : 1,
-                borderRadius: 0,
-                duration: 400,
-                easing: 'easeOutSine'
-            });
+            this.setState({rightPopin: true});
+            this.playFX('fadeIn');
+            setTimeout(() => {
+                this.setState({rightPopin: false});
+            },2000)
         }else{
-            anime({
-                targets : cover,
-                borderRadius: {
-                    value : "50%",
-                    duration : 800,
-                    easing: 'easeInOutSine'
-                },
-                opacity: 0,
-                scale : 0,
-                duration: 800,
-                easing: 'easeInOutSine'
-            });
-            //TODO create a nice popup !
-            alert('wrong song ! Try again !');
+            this.setState({wrongPopin: true});
+            this.playFX(null,cover);
+            setTimeout(() => {
+                this.setState({wrongPopin: false});
+            },2000)
 
         }
     }
 
-
-
     render() {
         return (
             <div className="playground">
+                <Popins type={this.state.popType} covers={this.state.covers}/>
                 <Header
                     timer={this.state.currentCount}
                     score={this.state.scoring}
@@ -151,15 +165,15 @@ class Covers extends Component {
                     }
                 </div>
             </div>
-
         );
     }
 }
 function mapStateToProps(state){
-    const {counter} = state;
+    const {counter, launch, songs} = state;
     return {
-        songList: state,
-        counter
+        songList: songs,
+        counter,
+        launch
     }
 }
-export default connect(mapStateToProps, {shuffleTracks, addCompletedSong})(Covers);
+export default connect(mapStateToProps, {shuffleTracks, addCompletedSong, launchAction})(Covers);
