@@ -5,6 +5,7 @@ import {connect} from 'react-redux';
 import {shuffleTracks, addCompletedSong} from '../actions/index';
 import '../style.css';
 import anime from 'animejs';
+import _ from 'lodash';
 
 class Covers extends Component {
     constructor(props){
@@ -20,18 +21,34 @@ class Covers extends Component {
             initCount: true,
             currentSong: '',
             currentTime: 0,
+            initTime: ''
         };
     }
 
     componentWillReceiveProps(nextProps){
         let {songs} = nextProps;
-        this.playTrack(songs);
+
+        if(songs.length){
+            this.playTrack(songs);
+        }else{
+            this.setState({
+                popType: 'final'
+            });
+            clearInterval(this.state.initTime);
+        }
+
         if(this.state.initCount){
-            setInterval(() => {
-                this.timer();
-            },1000);
+            this.initTimer();
             this.setState({initCount: false});
         }
+    }
+
+    initTimer(){
+        this.setState({
+            initTime: setInterval(() => {
+                this.timer();
+            },1000)
+        });
     }
 
     playFX(fx, ctx){
@@ -68,10 +85,11 @@ class Covers extends Component {
         },1000)
     }
 
+
+
     componentDidUpdate(prevProps){
         let {songs} = prevProps;
         if(this.state.currentCount === 0 ){
-            console.log('too slow bud ! ');
             this.playFX('fadeIn');
             this.setState({
                 currentCount : 30,
@@ -79,16 +97,18 @@ class Covers extends Component {
             });
             this.state.audio.pause();
             this.updateSongList(songs, songs[0].id);
-            this.resetPopups();
+            if(songs.length !== 1){
+                this.resetPopups();
+            }
         }
     }
 
-    componentDidMount(){
+    componentWillMount(){
         const BASE_URL = '/songs.json';
         fetch(BASE_URL, {method: 'GET'})
             .then(res => res.json())
             .then(json => {
-                this.setState({covers: json})
+                this.setState({covers: _.shuffle(json)})
             });
     }
 
@@ -104,8 +124,6 @@ class Covers extends Component {
     playTrack(newSongs){
         let songs = newSongs;
         let audio = new Audio(songs[0].track);
-        console.log(songs[0]);
-
         this.setState({ nbSong: this.state.nbSong + 1 });
         if(!this.state.playing){
             audio.addEventListener('loadedmetadata', function() {
@@ -138,7 +156,9 @@ class Covers extends Component {
             this.state.audio.pause();
             this.updateSongList(songs, songs[0].id);
             this.playFX('fadeIn');
-            this.resetPopups();
+            if(songs.length !== 1){
+                this.resetPopups();
+            }
         }else{
             this.setState({popType: 'wrong'});
             this.playFX(null,cover);
@@ -164,6 +184,9 @@ class Covers extends Component {
                     totalScore={this.state.covers.length}
                 />
                 <div className="covers-grid">
+                    <div className="cover-logo">
+                        <img src="../img/logo.jpg" alt="logo"/>
+                    </div>
                     {
                         this.state.covers.map((cover) => {
                             return (
@@ -177,6 +200,16 @@ class Covers extends Component {
                             )
                         })
                     }
+                    <div className="credits">
+                        <div className="credit-content">
+                            <h1>A project by</h1>
+                            <p>Pereira Marine</p>
+                            <p>Derouiche Hymen</p>
+                            <p>Blumenfeld Claire</p>
+                            <p>Jay Pauline</p>
+                            <p>Houssin Yannick</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         );

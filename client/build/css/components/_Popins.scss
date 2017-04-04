@@ -17,6 +17,12 @@
   &.launcher-pop{
     background: rgba(255,255,255,0.80);
   }
+  &.nextTrack-pop{
+    background: rgba(255, 205, 39, 0.8);
+  }
+  &.final-pop{
+    background: rgba(143, 255, 28, 0.8);
+  }
 }
 
 .pop-content{

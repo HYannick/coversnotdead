@@ -2,13 +2,43 @@
   display: flex;
   flex-wrap: wrap;
 }
-
-.cover{
+.credits{
+  background: #0db793;
+  color: #ffffff;
+  text-align: center;
+  .credit-content{
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    h1{
+      font-size: 26px;
+      margin-bottom: 25px;
+      font-weight: bold;
+    }
+    p{
+      font-size: 12px;
+      margin-bottom: 10px;
+    }
+  }
+}
+.cover-logo, .credits{
   flex:1;
-  flex-basis: 25%;
+  flex-basis: 20%;
   position: relative;
   overflow: hidden;
-  padding-bottom: 25%;
+  padding-bottom: 20%;
+  img{
+    position: absolute;
+    width: 100%;
+  }
+}
+.cover{
+  flex:1;
+  flex-basis: 20%;
+  position: relative;
+  overflow: hidden;
+  padding-bottom: 20%;
   cursor: pointer;
   transition: 0.3s ease-out;
   &:hover{

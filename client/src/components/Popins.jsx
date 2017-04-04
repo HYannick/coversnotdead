@@ -48,6 +48,28 @@ class Popins extends Component {
         )
     }
 
+    results(){
+        let {score, totalScore} = this.props;
+        let endSentence = '';
+        if(score>=0 && score<=12){
+            endSentence = <h3>Well, you have got some marge buddy !</h3>
+        }else if(score>=13 && score<=22){
+            endSentence = <h3>Well, you are on the good road !</h3>
+        }else if(score>=23 && score<=totalScore){
+            endSentence = <h3>Well, you are really a rockstar ! Congratulations !</h3>
+        }
+        return(
+            <div className="final-pop popin">
+                <div className="pop-content">
+                    <h3>Well done !</h3>
+                    {endSentence}
+                    <h4>Here your final score</h4>
+                    <h1>{score}/{totalScore}</h1>
+                    <button>Retry</button>
+                </div>
+            </div>
+        )
+    }
     tooSlow(){
         return(
             <div className="nextTrack-pop popin">
@@ -62,6 +84,7 @@ class Popins extends Component {
         this.setState({displayPopLaunch: false});
         this.props.shuffleTracks(this.props.covers);
     }
+
     render() {
         const popType = this.props.type;
         let popin = null;
@@ -70,6 +93,7 @@ class Popins extends Component {
         (popType === 'right') ? popin = this.rightAnswer() : '';
         (popType === 'wrong') ? popin = this.wrongAnswer() : '';
         (popType === 'next') ? popin = this.tooSlow() : '';
+        (popType === 'final') ? popin = this.results() : '';
 
         return (
             <div>

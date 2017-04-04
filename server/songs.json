@@ -129,7 +129,7 @@
   },
   {
     "id": 20,
-    "artist" : "Kinks",
+    "artist" : "The Kinks",
     "picture" : "https://ayho.fr/covers/img/kinks.gif",
     "track" : "https://ayho.fr/covers/songs/kinks.mp3"
   },
@@ -153,7 +153,7 @@
   },
   {
     "id": 24,
-    "artist" : "Generation",
+    "artist" : "The Who",
     "picture" : "https://ayho.fr/covers/img/the-who.gif",
     "track" : "https://ayho.fr/covers/songs/generation.mp3"
   },
@@ -171,14 +171,38 @@
   },
   {
     "id": 27,
-    "artist" : "Crystals",
+    "artist" : "The Crystals",
     "picture" : "https://ayho.fr/covers/img/The-Crystals-Rebel.gif",
     "track" : "https://ayho.fr/covers/songs/crystals.mp3"
   },
   {
     "id": 28,
-    "artist" : "Sugar",
+    "artist" : "Rolling Stones",
     "picture" : "https://ayho.fr/covers/img/Rolling-Stones.gif",
+    "track" : "https://ayho.fr/covers/songs/rollingstones.mp3"
+  },
+  {
+    "id": 29,
+    "artist" : "Elvis Costello",
+    "picture" : "https://ayho.fr/covers/img/elviscostello.gif",
+    "track" : "https://ayho.fr/covers/songs/elviscostello.mp3"
+  },
+  {
+    "id": 30,
+    "artist" : "Fleetwood",
+    "picture" : "https://ayho.fr/covers/img/fleetwood-mac.gif",
+    "track" : "https://ayho.fr/covers/songs/fleet.mp3"
+  },
+  {
+    "id": 31,
+    "artist" : "John Lee",
+    "picture" : "https://ayho.fr/covers/img/Burnin-john-lee-hooker.gif",
+    "track" : "https://ayho.fr/covers/songs/hooker.mp3"
+  },
+  {
+    "id": 32,
+    "artist" : "Rolling Stones",
+    "picture" : "https://ayho.fr/covers/img/Rolling-stones2.gif",
     "track" : "https://ayho.fr/covers/songs/sugar.mp3"
   }
 ]
