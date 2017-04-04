@@ -1,6 +1,16 @@
+This is a simple React/Redux musical quizz based on a previous scholar project.
+
+Final project : [Covers.not.dead](https://coversnotdead.herokuapp.com/).
+
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
-This is a simple React/Redux musical quizz.
+###Stack ###
+* React
+* Redux
+* Babel
+* SASS
+* Node
+* Lodash
 
 To run it :
 
@@ -20,4 +30,4 @@ And finally
 npm start
 ```
 
-Both client and serer will run thanks to [Concurrently](https://github.com/kimmobrunfeldt/concurrently).
+Both client and server will run thanks to [Concurrently](https://github.com/kimmobrunfeldt/concurrently).
