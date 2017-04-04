@@ -103,15 +103,20 @@ table {
   font-size: 12px;
   margin-bottom: 10px; }
 
+.cover-logo:before, .credits:before, .cover:before {
+  content: '';
+  padding-bottom: 100%;
+  display: block; }
+
 .cover-logo, .credits {
   flex: 1;
   flex-basis: 20%;
   position: relative;
-  overflow: hidden;
-  height: 285px;
-  padding-bottom: 20%; }
+  overflow: hidden; }
 
 .cover-logo img, .credits img {
+  top: 0;
+  left: 0;
   position: absolute;
   width: 100%; }
 
@@ -120,8 +125,6 @@ table {
   flex-basis: 20%;
   position: relative;
   overflow: hidden;
-  height: 285px;
-  padding-bottom: 20%;
   cursor: pointer;
   transition: 0.3s ease-out; }
 

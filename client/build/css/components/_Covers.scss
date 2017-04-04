@@ -22,14 +22,21 @@
     }
   }
 }
+.cover-logo, .credits, .cover{
+  &:before{
+    content: '';
+    padding-bottom: 100%;
+    display: block;
+  }
+}
 .cover-logo, .credits{
   flex:1;
   flex-basis: 20%;
   position: relative;
   overflow: hidden;
-  height: 285px;
-  padding-bottom: 20%;
   img{
+    top: 0;
+    left:0;
     position: absolute;
     width: 100%;
   }
@@ -39,8 +46,6 @@
   flex-basis: 20%;
   position: relative;
   overflow: hidden;
-  height: 285px;
-  padding-bottom: 20%;
   cursor: pointer;
   transition: 0.3s ease-out;
   &:hover{
