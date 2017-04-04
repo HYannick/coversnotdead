@@ -1,3 +1,2 @@
 export const SHUFFLE_SONGS = 'SHUFFLE_SONGS';
 export const ADD_COMPLETED_SONG = 'ADD_COMPLETED_SONG';
-export const LAUNCH = 'LAUNCH';

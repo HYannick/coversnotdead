@@ -1,18 +1,26 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { launchAction, shuffleTracks } from '../actions/index'
+import { shuffleTracks } from '../actions/index'
 import '../style.css';
 
 class Popins extends Component {
+
     constructor(props){
         super(props);
+        this.state = {
+            displayPopLaunch : true,
+            currentTrack : ''
+        }
     }
+
     rightAnswer(){
+        console.log(this.props);
         return (
             <div className="right-pop popin">
                 <div className="pop-content">
                     <p>Yeeeey ! You earned 1 point.</p>
-                    <p>Here is your score : {this.state.scoring}</p>
+                    <p>The artist is : {this.props.currentSong}</p>
+                    <p>Here is your score : {this.props.score}/{this.props.totalScore}</p>
                 </div>
             </div>
         )
@@ -44,24 +52,25 @@ class Popins extends Component {
         return(
             <div className="nextTrack-pop popin">
                 <div className="pop-content">
-                    <p>Too slow bud !</p>
+                    <p>Too slow bud' !</p>
                 </div>
             </div>
         )
     }
 
     launch(){
-        this.props.launchAction(true);
+        this.setState({displayPopLaunch: false});
         this.props.shuffleTracks(this.props.covers);
-        console.log(this.props);
     }
     render() {
         const popType = this.props.type;
         let popin = null;
+
+        (this.state.displayPopLaunch) ? popin = this.launcher() : '';
         (popType === 'right') ? popin = this.rightAnswer() : '';
         (popType === 'wrong') ? popin = this.wrongAnswer() : '';
-        (popType === 'launcher') ? popin = this.launcher() : '';
         (popType === 'next') ? popin = this.tooSlow() : '';
+
         return (
             <div>
                 {popin}
@@ -70,10 +79,5 @@ class Popins extends Component {
         );
     }
 }
-function mapStateToProps(state){
-    let {launch} = state;
-    return {
-        launch
-    }
-}
-export default connect(mapStateToProps, {launchAction, shuffleTracks})(Popins);
+
+export default connect(null, {shuffleTracks})(Popins);

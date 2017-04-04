@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import Header from './Header';
 import Popins from './Popins';
 import {connect} from 'react-redux';
-import {shuffleTracks, addCompletedSong, launchAction} from '../actions/index';
+import {shuffleTracks, addCompletedSong} from '../actions/index';
 import '../style.css';
 import anime from 'animejs';
 
@@ -16,21 +16,22 @@ class Covers extends Component {
             audio: null,
             scoring: 0,
             nbSong: 0,
-            popType: 'launcher',
-            rightPopin: false,
-            wrongPopin: false,
-            launchPopin: true,
-            nextSongPopin : false
-        }
+            popType: '',
+            initCount: true,
+            currentSong: '',
+            currentTime: 0,
+        };
     }
 
-
     componentWillReceiveProps(nextProps){
-        let {songList} = nextProps;
-        setInterval(() => {
-            this.timer();
-        },1000);
-        this.playTrack(songList);
+        let {songs} = nextProps;
+        this.playTrack(songs);
+        if(this.state.initCount){
+            setInterval(() => {
+                this.timer();
+            },1000);
+            this.setState({initCount: false});
+        }
     }
 
     playFX(fx, ctx){
@@ -61,15 +62,24 @@ class Covers extends Component {
 
     }
 
+    resetPopups(){
+        setTimeout(() => {
+            this.setState({popType: ''});
+        },1000)
+    }
+
     componentDidUpdate(prevProps){
-        let {songList} = prevProps;
+        let {songs} = prevProps;
         if(this.state.currentCount === 0 ){
-            //TODO nice popup
             console.log('too slow bud ! ');
             this.playFX('fadeIn');
-            this.setState({currentCount : 30});
+            this.setState({
+                currentCount : 30,
+                popType: 'next'
+            });
             this.state.audio.pause();
-            this.updateSongList(songList, songList[0].id);
+            this.updateSongList(songs, songs[0].id);
+            this.resetPopups();
         }
     }
 
@@ -78,28 +88,30 @@ class Covers extends Component {
         fetch(BASE_URL, {method: 'GET'})
             .then(res => res.json())
             .then(json => {
-                this.setState({covers: json}, () => {
-                    //this.props.shuffleTracks(this.state.covers);
-                });
+                this.setState({covers: json})
             });
-        //init timer
-
     }
+
     timer(){
         this.setState({ currentCount: this.state.currentCount - 1 });
     }
+
     updateSongList(songs, index){
         this.props.shuffleTracks(songs);
         this.props.addCompletedSong(songs, index);
     }
+
     playTrack(newSongs){
         let songs = newSongs;
         let audio = new Audio(songs[0].track);
         console.log(songs[0]);
-        console.log(audio);
+
         this.setState({ nbSong: this.state.nbSong + 1 });
         if(!this.state.playing){
-            audio.play();
+            audio.addEventListener('loadedmetadata', function() {
+                audio.play();
+                console.log("Playing " + audio.src + ", for: " + audio.duration + "seconds.");
+            });
             this.setState({
                 playing: true,
                 audio
@@ -112,42 +124,44 @@ class Covers extends Component {
                 audio
             })
         }
-
     }
-
 
     matchTracks(index, ctx){
         const cover = ctx.parentNode;
-        let {songList} = this.props;
-        if(songList[0].id === index){
-            this.setState({currentCount: 30});
+        let {songs} = this.props;
+        if(songs[0].id === index){
+            this.setState({
+                currentCount: 30,
+                scoring: this.state.scoring + 1,
+                popType: 'right'
+            });
             this.state.audio.pause();
-            this.updateSongList(songList, songList[0].id);
-            this.setState({scoring: this.state.scoring + 1});
-            this.setState({rightPopin: true});
+            this.updateSongList(songs, songs[0].id);
             this.playFX('fadeIn');
-            setTimeout(() => {
-                this.setState({rightPopin: false});
-            },2000)
+            this.resetPopups();
         }else{
-            this.setState({wrongPopin: true});
+            this.setState({popType: 'wrong'});
             this.playFX(null,cover);
-            setTimeout(() => {
-                this.setState({wrongPopin: false});
-            },2000)
-
+            this.resetPopups();
         }
     }
 
     render() {
         return (
             <div className="playground">
-                <Popins type={this.state.popType} covers={this.state.covers}/>
+                <Popins
+                    type={this.state.popType}
+                    covers={this.state.covers}
+                    score={this.state.scoring}
+                    totalScore={this.state.covers.length}
+                    currentSong={this.state.currentSong}
+                />
                 <Header
                     timer={this.state.currentCount}
                     score={this.state.scoring}
                     songLeft={this.state.nbSong}
                     totalSongs={this.state.covers.length}
+                    totalScore={this.state.covers.length}
                 />
                 <div className="covers-grid">
                     {
@@ -168,12 +182,12 @@ class Covers extends Component {
         );
     }
 }
+
 function mapStateToProps(state){
-    const {counter, launch, songs} = state;
+    const {counter, songs} = state;
     return {
-        songList: songs,
-        counter,
-        launch
+        songs,
+        counter
     }
 }
-export default connect(mapStateToProps, {shuffleTracks, addCompletedSong, launchAction})(Covers);
+export default connect(mapStateToProps, {shuffleTracks, addCompletedSong})(Covers);

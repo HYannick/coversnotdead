@@ -2,9 +2,7 @@ import React, { Component } from 'react';
 import '../style.css';
 
 class Header extends Component {
-    constructor(props){
-        super(props);
-    }
+
     render() {
         return (
             <div className="head-cover">
@@ -16,7 +14,7 @@ class Header extends Component {
                     <h4>Don't forget to activate your headphones!</h4>
                 </div>
                 <div className="item score">
-                    <p className="nb-points">Score : {this.props.score}/30</p>
+                    <p className="nb-points">Score : {this.props.score}/{this.props.totalScore}</p>
                     <p className="nb-songs">Songs : {this.props.songLeft}/{this.props.totalSongs}</p>
                 </div>
             </div>
