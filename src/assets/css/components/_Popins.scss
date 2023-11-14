@@ -1,0 +1,46 @@
+.popin {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  &.right-pop{
+    background: rgba(173, 255, 47, 0.80);
+  }
+  &.wrong-pop{
+    background: rgba(255, 78, 80, 0.80);
+  }
+  &.launcher-pop{
+    background: rgba(255,255,255,0.80);
+  }
+  &.nextTrack-pop{
+    background: rgba(255, 205, 39, 0.8);
+  }
+  &.final-pop{
+    background: rgba(143, 255, 28, 0.8);
+  }
+}
+
+.pop-content{
+  padding: 20px;
+  background: #ffffff;
+  text-align: center;
+  button{
+    border: none;
+    background: #FFEB3B;
+    padding: 10px 15px;
+    margin: 15px auto;
+    display: table;
+    cursor: pointer;
+    font-size: 16px;
+    transition: 0.2s ease-out;
+    transform: scale(1.2);
+    &:hover{
+      transform: scale(1);
+    }
+  }
+}
