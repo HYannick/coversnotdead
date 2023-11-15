@@ -1,5 +1,5 @@
 import {ReactElement, useState} from 'react';
-import {ModalType} from './Covers.tsx';
+import {ModalType} from '../covers/Covers.tsx';
 export default function Modal({currentCover, timer, score, totalScore, onInit, covers, type}: any) {
     const [displayPopLaunch, setDisplayPopLaunch] = useState(true)
 

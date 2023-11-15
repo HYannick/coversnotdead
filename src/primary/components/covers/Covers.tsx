@@ -1,13 +1,13 @@
-import {useCallback, useContext, useEffect, useState} from 'react';
-import Header from './Header';
-import Modal from './Modal';
 import anime from 'animejs'
-import {Cover} from '../domain/Cover.ts';
-import {SongContext} from './SongContext.tsx';
-import CoverCard from './Cover.tsx';
-import CreditsCard from './CreditsCard.tsx';
-import LogoCard from './LogoCard.tsx';
-import songs from '../secondary/songs.json'
+import {useCallback, useContext, useEffect, useState} from 'react';
+import Header from '../common/Header.tsx';
+import Modal from '../common/Modal.tsx';
+import {Cover} from '../../../domain/Cover.ts';
+import CoverCard from './CoverCard.tsx';
+import CreditsCard from '../common/CreditsCard.tsx';
+import LogoCard from '../common/LogoCard.tsx';
+import {SongContext} from '../../contexts/SongContext.tsx';
+import CoverResource from '../../../secondary/CoverResource.ts';
 
 const TIMER_DURATION = 30;
 
@@ -42,8 +42,8 @@ export default function Covers() {
   const [audio, setAudio] = useState<HTMLAudioElement | null>(null);
 
   useEffect(() => {
-    const covers = songs as unknown;
-    initCovers(covers as Cover[]);
+    const covers = CoverResource().getCoverData();
+    initCovers(covers);
   }, []);
 
   useEffect(() => {

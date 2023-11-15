@@ -1,4 +1,4 @@
-import logo from '../assets/img/logo.gif'
+import logo from '../../../assets/img/logo.gif'
 export default function Header ({timer, score, songLeft, totalScore, totalSongs}: any) {
         return (
             <div className="head-cover">

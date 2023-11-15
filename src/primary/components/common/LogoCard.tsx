@@ -1,4 +1,4 @@
-import logo from '../assets/img/logo.jpg';
+import logo from '../../../assets/img/logo.jpg';
 
 export default function LogoCard() {
   return (

@@ -3,145 +3,145 @@
     "id": 0,
     "artist" : "Billy Joel",
     "picture" : "http://res.cloudinary.com/dtiwp5ise/image/upload/v1699873791/coversnotdead/img/v7q9bwds7lgitnzrr3bq.gif",
-    "track" : "https://res.cloudinary.com/dtiwp5ise/video/upload/v1699963627/coversnotdead/songs/hh5nxljxiuqftzzjazlm.mp3"
+    "track" : "https://res.cloudinary.com/dtiwp5ise/video/upload/v1700043379/coversnotdead/songs/billiejoel.mp3"
   },
   {
     "id": 1,
     "artist" : "Velvets",
     "picture" : "http://res.cloudinary.com/dtiwp5ise/image/upload/v1699873792/coversnotdead/img/abj773uozubk79rkkehv.gif",
-    "track" : "https://res.cloudinary.com/dtiwp5ise/video/upload/v1699963627/coversnotdead/songs/pvzekbvtdp48lifrnpyk.mp3"
+    "track" : "https://res.cloudinary.com/dtiwp5ise/video/upload/v1700043380/coversnotdead/songs/velvets.mp3"
   },
   {
     "id": 2,
     "artist" : "Elvis Presley",
     "picture" : "http://res.cloudinary.com/dtiwp5ise/image/upload/v1699873788/coversnotdead/img/dom9aoqkoqzbcf6ocohm.gif",
-    "track" : "elvis.mp3"
+    "track" : "http://res.cloudinary.com/dtiwp5ise/video/upload/v1700044670/coversnotdead/songs/jzwqxrmeosgstbh2vdpw.mp3"
   },
   {
     "id": 3,
-    "artist" : "Night Fever",
+    "artist" : "Bee Gees",
     "picture" : "http://res.cloudinary.com/dtiwp5ise/image/upload/v1699878467/coversnotdead/img/fbes2ob6iopg3c4m4osv.jpg",
-    "track" : "nightfever.mp3"
+    "track" : "http://res.cloudinary.com/dtiwp5ise/video/upload/v1700043379/coversnotdead/songs/beegees.mp3"
   },
   {
     "id": 4,
     "artist" : "Orbison",
     "picture" : "http://res.cloudinary.com/dtiwp5ise/image/upload/v1699873788/coversnotdead/img/pntsoijgyqtwe5ttuxse.gif",
-    "track" : "orbison.mp3"
+    "track" : "http://res.cloudinary.com/dtiwp5ise/video/upload/v1700044670/coversnotdead/songs/q00pfdmps6gcwswworx0.mp3"
   },
   {
     "id": 5,
     "artist" : "Jimmy Hendrix",
     "picture" : "http://res.cloudinary.com/dtiwp5ise/image/upload/v1699873788/coversnotdead/img/stnxehqjhqz2nccf4lur.gif",
-    "track" : "hendrix2.mp3"
+    "track" : "http://res.cloudinary.com/dtiwp5ise/video/upload/v1700044670/coversnotdead/songs/e8l0zqfliyw8vnayiewx.mp3"
   },
   {
     "id": 6,
     "artist" : "Sex Pistols",
     "picture" : "http://res.cloudinary.com/dtiwp5ise/image/upload/v1699873798/coversnotdead/img/bxibbuptjqim1nqbtntp.gif",
-    "track" : "pistols.mp3"
+    "track" : "http://res.cloudinary.com/dtiwp5ise/video/upload/v1700044672/coversnotdead/songs/zjbhganz3dgz4fm7ybxn.mp3"
   },
   {
     "id": 7,
     "artist" : "Bill Halley",
     "picture" : "http://res.cloudinary.com/dtiwp5ise/image/upload/v1699873803/coversnotdead/img/zpd0jklnob5xumhms4uz.gif",
-    "track" : "billalley.mp3"
+    "track" : "http://res.cloudinary.com/dtiwp5ise/video/upload/v1700044670/coversnotdead/songs/tyaqok7ofsykcvqt5pnh.mp3"
   },
   {
     "id": 8,
     "artist" : "The Who",
     "picture" : "https://res.cloudinary.com/dtiwp5ise/image/upload/v1699873814/coversnotdead/img/p7uzsxf9xyjq0xzchr7o.gif",
-    "track" : "quickone.mp3"
+    "track" : "http://res.cloudinary.com/dtiwp5ise/video/upload/v1700052977/coversnotdead/songs/ab8qvjxsjdg3idoaq18t.mp3"
   },
   {
     "id": 9,
     "artist" : "ACDC",
     "picture" : "http://res.cloudinary.com/dtiwp5ise/image/upload/v1699873804/coversnotdead/img/s2heq42vypyw7ejb7xi3.gif",
-    "track" : "acdc.mp3"
+    "track" : "http://res.cloudinary.com/dtiwp5ise/video/upload/v1700052976/coversnotdead/songs/gnswnvwitgm9ff1imil6.mp3"
   },
   {
     "id": 10,
     "artist" : "The Beatles",
     "picture" : "http://res.cloudinary.com/dtiwp5ise/image/upload/v1699873797/coversnotdead/img/j8ohpmkqeem97cqvyc7x.gif",
-    "track" : "beatles.mp3"
+    "track" : "http://res.cloudinary.com/dtiwp5ise/video/upload/v1700052976/coversnotdead/songs/qtvatnxfexdy3djndib0.mp3"
   },
   {
     "id": 11,
     "artist" : "Eagles",
     "picture" : "http://res.cloudinary.com/dtiwp5ise/image/upload/v1699873802/coversnotdead/img/olefhssohmxlr5zab9sd.gif",
-    "track" : "eagles.mp3"
+    "track" : "http://res.cloudinary.com/dtiwp5ise/video/upload/v1700052974/coversnotdead/songs/ums0dzykwrriipcj7tdj.mp3"
   },
   {
     "id": 12,
     "artist" : "Four Tops",
     "picture" : "http://res.cloudinary.com/dtiwp5ise/image/upload/v1699873793/coversnotdead/img/afwpiwuc6plagkjdzm8i.gif",
-    "track" : "fourtops.mp3"
+    "track" : "http://res.cloudinary.com/dtiwp5ise/video/upload/v1700052976/coversnotdead/songs/xpffeykcdp4rqbedc0lf.mp3"
   },
   {
     "id": 13,
     "artist" : "Donna Summer",
     "picture" : "http://res.cloudinary.com/dtiwp5ise/image/upload/v1699873793/coversnotdead/img/fojedemwz0c6wfyzjwxz.gif",
-    "track" : "donnasummer.mp3"
+    "track" : "http://res.cloudinary.com/dtiwp5ise/video/upload/v1700052978/coversnotdead/songs/p8lwm7uhengiqigyago3.mp3"
   },
   {
     "id": 14,
     "artist" : "Bob Marley",
     "picture" : "http://res.cloudinary.com/dtiwp5ise/image/upload/v1699873795/coversnotdead/img/uax7vzimd5uzxc8r2kzu.gif",
-    "track" : "bobmarley.mp3"
+    "track" : "http://res.cloudinary.com/dtiwp5ise/video/upload/v1700052978/coversnotdead/songs/i7xvbs0blcdihpifmzgx.mp3"
   },
   {
     "id": 15,
     "artist" : "John Lennon",
     "picture" : "http://res.cloudinary.com/dtiwp5ise/image/upload/v1699873796/coversnotdead/img/ta0v4l6cx59zmudz9a0z.gif",
-    "track" : "lennon.mp3"
+    "track" : "http://res.cloudinary.com/dtiwp5ise/video/upload/v1700052977/coversnotdead/songs/s7epf9arsd7y4nxg9ime.mp3"
   },
   {
     "id": 16,
     "artist" : "Byrds",
     "picture" : "http://res.cloudinary.com/dtiwp5ise/image/upload/v1699873807/coversnotdead/img/liucws2owazbvtcugh2f.gif",
-    "track" : "byrds.mp3"
+    "track" : "http://res.cloudinary.com/dtiwp5ise/video/upload/v1700052975/coversnotdead/songs/hzn0xmahdwozqcxdzf5t.mp3"
   },
   {
     "id": 17,
     "artist" : "Hank",
     "picture" : "http://res.cloudinary.com/dtiwp5ise/image/upload/v1699873796/coversnotdead/img/pwkn9iif15adovwgc4ey.gif",
-    "track" : "hank.mp3"
+    "track" : "http://res.cloudinary.com/dtiwp5ise/video/upload/v1700052976/coversnotdead/songs/xhbwysqdiavj03illygm.mp3"
   },
   {
     "id": 18,
     "artist" : "Elton",
     "picture" : "http://res.cloudinary.com/dtiwp5ise/image/upload/v1699873793/coversnotdead/img/c0cfnjqdgngybmfvjhcq.gif",
-    "track" : "elton.mp3"
+    "track" : "http://res.cloudinary.com/dtiwp5ise/video/upload/v1700052974/coversnotdead/songs/dpgo74otowsswdniniog.mp3"
   },
   {
     "id": 19,
     "artist" : "Zeppelin",
     "picture" : "http://res.cloudinary.com/dtiwp5ise/image/upload/v1699873793/coversnotdead/img/ws9bs8p5usx31brpbo7k.gif",
-    "track" : "zeppelin.mp3"
+    "track" : "http://res.cloudinary.com/dtiwp5ise/video/upload/v1700052973/coversnotdead/songs/v1qc6penl73hvdpfofll.mp3"
   },
   {
     "id": 20,
     "artist" : "The Kinks",
     "picture" : "http://res.cloudinary.com/dtiwp5ise/image/upload/v1699873792/coversnotdead/img/rr6sgaejkmcexwvbdi0n.gif",
-    "track" : "kinks.mp3"
+    "track" : "http://res.cloudinary.com/dtiwp5ise/video/upload/v1700052973/coversnotdead/songs/h0rrwzsd3zldesdyhzzt.mp3"
   },
   {
     "id": 21,
     "artist" : "Forever Change",
     "picture" : "http://res.cloudinary.com/dtiwp5ise/image/upload/v1699873791/coversnotdead/img/h11dwxwf77fdpkgg00dn.gif",
-    "track" : "foreverchange.mp3"
+    "track" : "http://res.cloudinary.com/dtiwp5ise/video/upload/v1700052977/coversnotdead/songs/ucgojogjvnqcr8qti5ik.mp3"
   },
   {
     "id": 22,
     "artist" : "Bob Dylan",
     "picture" : "http://res.cloudinary.com/dtiwp5ise/image/upload/v1699873789/coversnotdead/img/vn17qsadlgdf7d6gurzm.gif",
-    "track" : "bobdylan.mp3"
+    "track" : "http://res.cloudinary.com/dtiwp5ise/video/upload/v1700052974/coversnotdead/songs/gelgsqp3zqhj8irja7sr.mp3"
   },
   {
     "id": 23,
     "artist" : "Fireball",
     "picture" : "http://res.cloudinary.com/dtiwp5ise/image/upload/v1699873799/coversnotdead/img/ibwzimb4gisqks1yizww.gif",
-    "track" : "fireball.mp3"
+    "track" : "http://res.cloudinary.com/dtiwp5ise/video/upload/v1700052973/coversnotdead/songs/pnaxchmzxokn4ak7n16d.mp3"
   },
   {
     "id": 24,

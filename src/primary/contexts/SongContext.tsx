@@ -1,10 +1,6 @@
 import _ from 'lodash';
 import {createContext, useState} from 'react';
-import {Cover} from '../domain/Cover.ts';
-
-export interface Song {
-  id: string;
-}
+import {Cover} from '../../domain/Cover.ts';
 
 type SongState =  {
   covers: Cover[]
