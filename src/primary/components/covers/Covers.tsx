@@ -9,7 +9,7 @@ import LogoCard from '../common/LogoCard.tsx';
 import {SongContext} from '../../contexts/SongContext.tsx';
 import CoverResource from '../../../secondary/CoverResource.ts';
 
-const TIMER_DURATION = 30;
+const TIMER_DURATION = 5;
 const NEXT_ROUND_DELAY = 1000;
 export enum ModalType {
   IDLE = '',
@@ -100,15 +100,13 @@ export default function Covers() {
   };
 
   const triggerEndOfRound = () => {
-    setNumberOfSongsPlayed(prev => prev + 1);
     applyAnimation('fadeIn');
     setCurrentCount(TIMER_DURATION);
     setModalType(ModalType.NEXT);
     audio?.pause();
     updateCoverList(coverList[0].id);
-    playTrack(currentCover!);
     if (coverList.length !== 1) {
-      resetModals();
+      setTimeout(resetModals, NEXT_ROUND_DELAY);
     }
   };
 
@@ -148,13 +146,14 @@ export default function Covers() {
 
     setIsPlaying(true);
     setAudio(newAudio);
+    setNumberOfSongsPlayed(prev => prev + 1);
   };
 
   const playNextRound = () => {
     updateCoverList(coverList[0].id);
     applyAnimation('fadeIn');
     if (coverList.length !== 1) {
-      resetModals();
+      setTimeout(resetModals, NEXT_ROUND_DELAY);
     }
   }
 
