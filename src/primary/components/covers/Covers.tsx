@@ -169,7 +169,7 @@ export default function Covers() {
   const handleIncorrectGuess = (coverElement: HTMLElement) => {
     setModalType(ModalType.WRONG);
     applyAnimation(null, coverElement);
-    resetModals();
+    setTimeout(resetModals, NEXT_ROUND_DELAY);
   };
   const matchTracks = (index: string, ctx: any) => {
     const cover = ctx.parentNode;
