@@ -1,12 +1,11 @@
 .logo{
-  text-align: left;
   img{
     width: 45px;
   }
 }
 .counter{
   font-size: 24px;
-  color: #FFEB3B;
+  color: $color-secondary;
   font-weight: bold;
 }
 .head-cover{
@@ -14,8 +13,8 @@
   flex-direction: row;
   align-items: center;
   height: 70px;
-  background: #000;
-  color: #fff;
+  background: $color-dark;
+  color: $color-light;
   .item{
     padding: 0 15px;
   }
