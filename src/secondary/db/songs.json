@@ -7,7 +7,7 @@
   },
   {
     "id": 1,
-    "artist" : "Velvets",
+    "artist" : "The Velvet Underground",
     "picture" : "http://res.cloudinary.com/dtiwp5ise/image/upload/v1699873792/coversnotdead/img/abj773uozubk79rkkehv.gif",
     "track" : "https://res.cloudinary.com/dtiwp5ise/video/upload/v1700043380/coversnotdead/songs/velvets.mp3"
   },
@@ -25,7 +25,7 @@
   },
   {
     "id": 4,
-    "artist" : "Orbison",
+    "artist" : "Roy Orbison",
     "picture" : "http://res.cloudinary.com/dtiwp5ise/image/upload/v1699873788/coversnotdead/img/pntsoijgyqtwe5ttuxse.gif",
     "track" : "http://res.cloudinary.com/dtiwp5ise/video/upload/v1700044670/coversnotdead/songs/q00pfdmps6gcwswworx0.mp3"
   },
@@ -97,13 +97,13 @@
   },
   {
     "id": 16,
-    "artist" : "Byrds",
+    "artist" : "The Byrds",
     "picture" : "http://res.cloudinary.com/dtiwp5ise/image/upload/v1699873807/coversnotdead/img/liucws2owazbvtcugh2f.gif",
     "track" : "http://res.cloudinary.com/dtiwp5ise/video/upload/v1700052975/coversnotdead/songs/hzn0xmahdwozqcxdzf5t.mp3"
   },
   {
     "id": 17,
-    "artist" : "Hank",
+    "artist" : "Hank Williams",
     "picture" : "http://res.cloudinary.com/dtiwp5ise/image/upload/v1699873796/coversnotdead/img/pwkn9iif15adovwgc4ey.gif",
     "track" : "http://res.cloudinary.com/dtiwp5ise/video/upload/v1700052976/coversnotdead/songs/xhbwysqdiavj03illygm.mp3"
   },
@@ -127,7 +127,7 @@
   },
   {
     "id": 21,
-    "artist" : "Forever Change",
+    "artist" : "Love",
     "picture" : "http://res.cloudinary.com/dtiwp5ise/image/upload/v1699873791/coversnotdead/img/h11dwxwf77fdpkgg00dn.gif",
     "track" : "http://res.cloudinary.com/dtiwp5ise/video/upload/v1700052977/coversnotdead/songs/ucgojogjvnqcr8qti5ik.mp3"
   },
@@ -139,7 +139,7 @@
   },
   {
     "id": 23,
-    "artist" : "Fireball",
+    "artist" : "Deep Purple",
     "picture" : "http://res.cloudinary.com/dtiwp5ise/image/upload/v1699873799/coversnotdead/img/ibwzimb4gisqks1yizww.gif",
     "track" : "http://res.cloudinary.com/dtiwp5ise/video/upload/v1700052973/coversnotdead/songs/pnaxchmzxokn4ak7n16d.mp3"
   },

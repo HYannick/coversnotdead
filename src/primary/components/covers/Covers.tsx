@@ -10,7 +10,7 @@ import {SongContext} from '../../contexts/SongContext.tsx';
 import CoverResource from '../../../secondary/CoverResource.ts';
 
 const TIMER_DURATION = 30;
-
+const NEXT_ROUND_DELAY = 1000;
 export enum ModalType {
   IDLE = '',
   RIGHT = 'right',
@@ -108,7 +108,7 @@ export default function Covers() {
     updateCoverList(coverList[0].id);
     playTrack(currentCover!);
     if (coverList.length !== 1) {
-      resetModalTypeAfterDelay();
+      resetModals();
     }
   };
 
@@ -119,8 +119,8 @@ export default function Covers() {
     if (timerId) clearInterval(timerId);
   };
 
-  const resetModalTypeAfterDelay = () => {
-    setTimeout(() => setModalType(ModalType.IDLE), 1000);
+  const resetModals = () => {
+    setModalType(ModalType.IDLE);
   };
 
   const startTimer = useCallback(() => {
@@ -150,22 +150,26 @@ export default function Covers() {
     setAudio(newAudio);
   };
 
+  const playNextRound = () => {
+    updateCoverList(coverList[0].id);
+    applyAnimation('fadeIn');
+    if (coverList.length !== 1) {
+      resetModals();
+    }
+  }
+
   const handleCorrectGuess = () => {
     setCurrentCount(TIMER_DURATION)
     setScore(score + 1)
     setModalType(ModalType.RIGHT)
     audio!.pause();
-    updateCoverList(coverList[0].id);
-    applyAnimation('fadeIn');
-    if (coverList.length !== 1) {
-      resetModalTypeAfterDelay();
-    }
+    setTimeout(playNextRound, NEXT_ROUND_DELAY);
   }
 
   const handleIncorrectGuess = (coverElement: HTMLElement) => {
     setModalType(ModalType.WRONG);
     applyAnimation(null, coverElement);
-    resetModalTypeAfterDelay();
+    resetModals();
   };
   const matchTracks = (index: string, ctx: any) => {
     const cover = ctx.parentNode;
