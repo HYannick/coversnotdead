@@ -147,54 +147,54 @@
     "id": 24,
     "artist" : "The Who",
     "picture" : "http://res.cloudinary.com/dtiwp5ise/image/upload/v1699873793/coversnotdead/img/qthd4hy1j6pyvzxjxpx9.gif",
-    "track" : "generation.mp3"
+    "track" : "http://res.cloudinary.com/dtiwp5ise/video/upload/v1700128479/coversnotdead/songs/nvktkkbsadddpuobohuy.mp3"
   },
   {
     "id": 25,
     "artist" : "Jimmy Cliff",
     "picture" : "http://res.cloudinary.com/dtiwp5ise/image/upload/v1699873794/coversnotdead/img/ktyvziergssi8lahvlb4.gif",
-    "track" : "cliff.mp3"
+    "track" : "http://res.cloudinary.com/dtiwp5ise/video/upload/v1700128478/coversnotdead/songs/d0qpjldfra1xwjamyysm.mp3"
   },
   {
     "id": 26,
     "artist" : "Pink Floyd",
     "picture" : "https://res.cloudinary.com/dtiwp5ise/image/upload/v1699873796/coversnotdead/img/cj1eqolllpnbfnr7qtnf.gif",
-    "track" : "pinkfloyd.mp3"
+    "track" : "http://res.cloudinary.com/dtiwp5ise/video/upload/v1700128482/coversnotdead/songs/crus5s4smx7v5xaqiseh.mp3"
   },
   {
     "id": 27,
     "artist" : "The Crystals",
     "picture" : "http://res.cloudinary.com/dtiwp5ise/image/upload/v1699873798/coversnotdead/img/u62uk5r3nux3pl9oamyq.gif",
-    "track" : "crystals.mp3"
+    "track" : "http://res.cloudinary.com/dtiwp5ise/video/upload/v1700128478/coversnotdead/songs/imd4eiyx4fcd37qidytn.mp3"
   },
   {
     "id": 28,
     "artist" : "Rolling Stones",
     "picture" : "http://res.cloudinary.com/dtiwp5ise/image/upload/v1699873788/coversnotdead/img/x1odh1sgqjetox05nhem.gif",
-    "track" : "rollingstones.mp3"
+    "track" : "http://res.cloudinary.com/dtiwp5ise/video/upload/v1700128481/coversnotdead/songs/xf54kq3lucwrgua922kz.mp3"
   },
   {
     "id": 29,
     "artist" : "Elvis Costello",
     "picture" : "http://res.cloudinary.com/dtiwp5ise/image/upload/v1699873797/coversnotdead/img/p5l3oa7bjcxofb7lcpho.gif",
-    "track" : "elviscostello.mp3"
+    "track" : "http://res.cloudinary.com/dtiwp5ise/video/upload/v1700128478/coversnotdead/songs/r0asagihj95oivxramjt.mp3"
   },
   {
     "id": 30,
     "artist" : "Fleetwood",
     "picture" : "http://res.cloudinary.com/dtiwp5ise/image/upload/v1699873790/coversnotdead/img/j8xeu0jpeo48us4f6ncr.gif",
-    "track" : "fleet.mp3"
+    "track" : "http://res.cloudinary.com/dtiwp5ise/video/upload/v1700128479/coversnotdead/songs/unzslcwfup4khrrkbjj2.mp3"
   },
   {
     "id": 31,
     "artist" : "John Lee",
     "picture" : "http://res.cloudinary.com/dtiwp5ise/image/upload/v1699873792/coversnotdead/img/qlzi3gtshdaise8v3yb8.gif",
-    "track" : "hooker.mp3"
+    "track" : "http://res.cloudinary.com/dtiwp5ise/video/upload/v1700128478/coversnotdead/songs/cofwkwbpnz3fdbuywzgl.mp3"
   },
   {
     "id": 32,
     "artist" : "Rolling Stones",
     "picture" : "http://res.cloudinary.com/dtiwp5ise/image/upload/v1699873794/coversnotdead/img/gljirdbkyjie1iomsags.gif",
-    "track" : "sugar.mp3"
+    "track" : "http://res.cloudinary.com/dtiwp5ise/video/upload/v1700128480/coversnotdead/songs/ve7w6mog32j1vawv6puz.mp3"
   }
 ]
