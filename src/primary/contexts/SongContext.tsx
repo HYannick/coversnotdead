@@ -1,5 +1,5 @@
 import _ from 'lodash';
-import {createContext, useState} from 'react';
+import {createContext, ReactElement, useState} from 'react';
 import {Cover} from '../../domain/Cover.ts';
 
 type SongState =  {
@@ -27,7 +27,7 @@ const defaultSongState = {
 export const SongContext = createContext<SongState>(defaultSongState)
 
 
-export default function  SongProvider({children}: any) {
+export default function  SongProvider({children}: {children: any}) {
   const [currentCover, setCurrentCover] = useState<Cover | null>(null);
   const [covers, setCovers] = useState<Cover[]>([]);
   const [coverList, setCoverList] = useState<Cover[]>([]);

@@ -1,6 +1,13 @@
 import logo from '../../../assets/img/logo.gif'
 
-export default function Header({timer, score, songLeft, totalScore, totalSongs}: any) {
+type HeaderProps = {
+  timer: number,
+  score: number,
+  songLeft: number,
+  totalScore: number,
+  totalSongs: number
+}
+export default function Header({timer, score, songLeft, totalScore, totalSongs}: HeaderProps) {
   return (
     <div className="head-cover">
       <div className="item logo">

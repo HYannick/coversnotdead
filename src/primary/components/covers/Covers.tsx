@@ -9,7 +9,7 @@ import LogoCard from '../common/LogoCard.tsx';
 import {SongContext} from '../../contexts/SongContext.tsx';
 import CoverResource from '../../../secondary/CoverResource.ts';
 
-const TIMER_DURATION = 30
+const TIMER_DURATION = 30;
 const NEXT_ROUND_DELAY = 1000;
 export enum ModalType {
   IDLE = '',
@@ -153,7 +153,7 @@ export default function Covers() {
     updateCoverList(coverList[0].id);
     applyAnimation('fadeIn');
     if (coverList.length !== 1) {
-      setTimeout(resetModals, NEXT_ROUND_DELAY);
+      resetModals();
     }
   }
 
@@ -170,14 +170,24 @@ export default function Covers() {
     applyAnimation(null, coverElement);
     setTimeout(resetModals, NEXT_ROUND_DELAY);
   };
-  const matchTracks = (index: string, ctx: any) => {
-    const cover = ctx.parentNode;
+  const matchTracks = (index: string, ctx: HTMLElement) => {
+    const cover = ctx.parentNode as HTMLElement;
     if (coverList[0].id === index && currentCover) {
       handleCorrectGuess();
     } else {
       handleIncorrectGuess(cover)
     }
   };
+
+  const replayGame = () => {
+    setScore(0);
+    setNumberOfSongsPlayed(0);
+    setGameStarted(false);
+    setModalType(ModalType.IDLE);
+    setCurrentCount(TIMER_DURATION);
+    initCovers(covers);
+    startGame();
+  }
 
   return (
     <div className="playground">
@@ -189,6 +199,7 @@ export default function Covers() {
         totalScore={covers.length}
         currentCover={currentCover}
         onInit={startGame}
+        onRetry={replayGame}
       />
       <Header
         timer={currentCount}

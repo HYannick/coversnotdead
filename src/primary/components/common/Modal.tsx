@@ -1,6 +1,18 @@
 import {ReactElement, useState} from 'react';
 import {ModalType} from '../covers/Covers.tsx';
-export default function Modal({currentCover, timer, score, totalScore, onInit, covers, type}: any) {
+import {Cover} from '../../../domain/Cover.ts';
+
+export type ModalProps = {
+    currentCover: Cover | null,
+    timer: number,
+    score: number,
+    totalScore: number,
+    onInit: (covers: Cover[]) => void;
+    covers: Cover[],
+    type: ModalType,
+    onRetry: () => void;
+}
+export default function Modal({currentCover, timer, score, totalScore, onInit, covers, type, onRetry}: ModalProps) {
     const [displayPopLaunch, setDisplayPopLaunch] = useState(true)
 
     const rightAnswerModal = () => {
@@ -8,7 +20,7 @@ export default function Modal({currentCover, timer, score, totalScore, onInit, c
             <div className="right-pop popin">
                 <div className="pop-content">
                     <p>Yeeeey ! You earned 1 point.</p>
-                    <p>The artist is : {currentCover.artist}</p>
+                    <p>The artist is : {currentCover && currentCover.artist}</p>
                     <p>Here is your score : {score}/{totalScore}</p>
                 </div>
             </div>
@@ -53,7 +65,7 @@ export default function Modal({currentCover, timer, score, totalScore, onInit, c
                     {endSentence}
                     <h4>Here your final score</h4>
                     <h1>{score}/{totalScore}</h1>
-                    <button>Retry</button>
+                    <button onClick={onRetry}>Retry</button>
                 </div>
             </div>
         )
