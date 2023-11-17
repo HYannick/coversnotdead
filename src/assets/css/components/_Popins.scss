@@ -23,12 +23,31 @@
   &.final-pop{
     background: $popin-color-final;
   }
+  .highlighted-song {
+    font-size: 16px;
+    font-weight: bold;
+    color: $color-primary;
+    text-transform: uppercase;
+  }
 }
 
 .pop-content{
   padding: 20px;
   background: $color-light;
   text-align: center;
+  h3 {
+    font-size: 22px;
+    margin-bottom: 10px;
+  }
+  .end-sentence {
+    font-size: 18px;
+    margin: 0 0 10px;
+  }
+  .final-score {
+    margin: 20px 0;
+    font-size: 40px;
+    color: $color-primary;
+  }
   button{
     border: none;
     background: $color-secondary;

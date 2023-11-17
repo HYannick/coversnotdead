@@ -9,8 +9,9 @@ import LogoCard from '../common/LogoCard.tsx';
 import {SongContext} from '../../contexts/SongContext.tsx';
 import CoverResource from '../../../secondary/CoverResource.ts';
 
-const TIMER_DURATION = 30;
+const TIMER_DURATION = 5;
 const NEXT_ROUND_DELAY = 1000;
+
 export enum ModalType {
   IDLE = '',
   RIGHT = 'right',
@@ -134,6 +135,7 @@ export default function Covers() {
   };
 
   const playTrack = (cover: Cover) => {
+    if(!cover) return;
     const newAudio = new Audio(cover.track);
     if (!isPlaying) {
       newAudio.addEventListener('loadedmetadata', () => {

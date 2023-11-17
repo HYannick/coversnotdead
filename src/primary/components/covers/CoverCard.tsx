@@ -2,7 +2,7 @@ import {Cover} from '../../../domain/Cover.ts';
 
 type CoverCardProps = {
   cover: Cover,
-  onClick: (coverId: string, e: EventTarget) => void
+  onClick: (coverId: string, e: any) => void
 }
 export default function CoverCard({cover, onClick}: CoverCardProps) {
   return (

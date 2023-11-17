@@ -1,5 +1,5 @@
 import _ from 'lodash';
-import {createContext, ReactElement, useState} from 'react';
+import {createContext, useState} from 'react';
 import {Cover} from '../../domain/Cover.ts';
 
 type SongState =  {
