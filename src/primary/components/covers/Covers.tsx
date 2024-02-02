@@ -9,7 +9,7 @@ import LogoCard from '../common/LogoCard.tsx';
 import {SongContext} from '../../contexts/SongContext.tsx';
 import CoverResource from '../../../secondary/CoverResource.ts';
 
-const TIMER_DURATION = 5;
+const TIMER_DURATION = 30;
 const NEXT_ROUND_DELAY = 1000;
 
 export enum ModalType {
